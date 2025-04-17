@@ -83,7 +83,7 @@ export const itemRouter = createTRPCRouter({
           WHERE
             item = ${getDbName(input.item, input.verb)}
             AND time > ${input.from}::date
-            AND time < ${input.to}::date
+            AND time < ${input.to}
         )
       SELECT
         dates.date AS time,
